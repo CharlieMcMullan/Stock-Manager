@@ -47,15 +47,13 @@ void Stock::DisplayPrice(void)//Displays price from options
 	cout << "\t|" << setw(10) << S_ID_Num;
 	cout << "\t|" << setw(10) << S_Name;
 
+	cout << "\t|" << setw(10) << S_Quantity;
 	HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);//changes text colour
-	//changes colour for price changes by user to highlight these changes to the user
+//changes colour for price changes by user to highlight these changes to the user
 	SetConsoleTextAttribute(h, 12);
-	cout << "\t|" << setw(10) << S_Quantity << "\t|";
-	SetConsoleTextAttribute(h, 7);//changes text colour back to default
-
-	cout << " " << setw(10) << S_Price << "\t |" << endl;
+	cout <<"\t|" << setw(10) << S_Price << "\t| " << endl;
 	cout << "\t\n";
-
+	SetConsoleTextAttribute(h, 7);//changes text colour back to default
 }//end of displayPrice 
 
 
